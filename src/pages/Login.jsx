@@ -27,27 +27,23 @@ export default function Login() {
     setIsLoading(true);
     setError('');
 
-    // Simulación de login
-    setTimeout(() => {
-      if (formData.username && formData.password) {
-        const isAdmin = formData.username.toLowerCase() === 'admin';
-        login({
-          id: Date.now(),
-          name: formData.username,
-          isAdmin
-        });
+    if (!formData.username || !formData.password) {
+      setError('Por favor completa todos los campos');
+      setIsLoading(false);
+      return;
+    }
 
-        const from = location.state?.from || (isAdmin ? '/admin' : '/');
+    setTimeout(() => {
+      const result = login(formData.username, formData.password);
+
+      if (result.success) {
+        const from = location.state?.from || (result.user.isAdmin ? '/admin' : '/');
         navigate(from, { replace: true });
       } else {
-        setError('Por favor completa todos los campos');
+        setError(result.error);
       }
       setIsLoading(false);
     }, 500);
-  };
-
-  const handleClientLogin = () => {
-    setFormData({ username: 'cliente', password: 'cliente' });
   };
 
   const handleAdminLogin = () => {
@@ -57,16 +53,14 @@ export default function Login() {
   return (
     <div className="login">
       <div className="login__split">
-        {/* Lado izquierdo - Branding */}
         <div className="login__branding">
           <Link to="/" className="login__logo">
             Sazon Imperial
           </Link>
         </div>
 
-        {/* Lado derecho - Formulario */}
         <div className="login__form-container">
-          <h1 className="login__title">Iniciar Sesión</h1>
+          <h1 className="login__title">Iniciar Sesion</h1>
 
           <form className="login__form" onSubmit={handleSubmit}>
             <div className="login__field">
@@ -85,7 +79,7 @@ export default function Login() {
               <input
                 type="password"
                 name="password"
-                placeholder="Contraseña"
+                placeholder="Contrasena"
                 value={formData.password}
                 onChange={handleChange}
                 className="login__input"
@@ -95,34 +89,25 @@ export default function Login() {
 
             {error && <p className="login__error">{error}</p>}
 
-            <div className="login__test-users">
-              <button
-                type="button"
-                className="login__test-btn"
-                onClick={handleClientLogin}
-              >
-                Cliente Demo
-              </button>
-              <button
-                type="button"
-                className="login__test-btn"
-                onClick={handleAdminLogin}
-              >
-                Admin Demo
-              </button>
-            </div>
+            <button
+              type="button"
+              className="login__admin-link"
+              onClick={handleAdminLogin}
+            >
+              Administrador Login
+            </button>
 
             <button
               type="submit"
               className="login__submit"
               disabled={isLoading}
             >
-              {isLoading ? 'Iniciando...' : 'Iniciar Sesión'}
+              {isLoading ? 'Iniciando...' : 'Iniciar Sesion'}
             </button>
           </form>
 
           <p className="login__register">
-            ¿No tienes Cuenta?{' '}
+            No tienes Cuenta?{' '}
             <Link to="/registro" className="login__register-link">
               Registrate
             </Link>

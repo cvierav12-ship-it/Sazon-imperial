@@ -83,26 +83,19 @@
   text-align: center;
 }
 
-.login__test-users {
-  display: flex;
-  gap: var(--spacing-sm);
-  justify-content: center;
-}
-
-.login__test-btn {
+.login__admin-link {
   color: var(--color-primary);
-  font-size: 14px;
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border: 1px solid var(--color-primary);
-  border-radius: var(--border-radius-sm);
+  font-size: 18px;
+  text-align: center;
+  padding: var(--spacing-sm);
+  text-decoration: underline;
   background: none;
+  border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
 }
 
-.login__test-btn:hover {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+.login__admin-link:hover {
+  opacity: 0.8;
 }
 
 .login__submit {

@@ -68,14 +68,21 @@ export default function Register() {
     setIsLoading(true);
 
     setTimeout(() => {
-      register({
+      const result = register({
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
-        username: formData.username
+        username: formData.username,
+        password: formData.password
       });
+
       setIsLoading(false);
-      setShowSuccess(true);
+
+      if (result.success) {
+        setShowSuccess(true);
+      } else {
+        setErrors({ username: result.error });
+      }
     }, 500);
   };
 
