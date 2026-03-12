@@ -19,7 +19,7 @@ import './styles/global.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Sazon-imperial">
       <AuthProvider>
         <ReservationProvider>
           <Routes>
