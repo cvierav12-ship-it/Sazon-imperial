@@ -78,19 +78,41 @@ src/
     └── variables.css
 ```
 
+## Credenciales de Acceso
+
+### Administrador
+| Usuario | Contraseña |
+|---------|------------|
+| admin | admin |
+
+### Cliente
+Para acceder como cliente, primero debe registrarse en la aplicacion. El sistema valida las credenciales contra los usuarios registrados en localStorage.
+
 ## Funcionalidades
 
 ### Cliente
 - Ver servicios del restaurante (Buffet, Catering, Eventos)
-- Registrarse e iniciar sesión
+- Registrarse con validacion de campos
+- Iniciar sesion con credenciales registradas
 - Realizar reservaciones seleccionando fecha, hora y mesa
-- Ver confirmación de reserva
+- Ver confirmacion de reserva
 
 ### Administrador
 - Dashboard con resumen de reservaciones
-- Lista de reservaciones con filtros y búsqueda
+- Lista de reservaciones con filtros y busqueda
 - Calendario semanal interactivo
-- Gestión de reservas (eliminar)
+- Gestion de reservas (eliminar)
+
+## Diseno Responsive
+
+La aplicacion se adapta a diferentes tamanos de pantalla:
+
+| Breakpoint | Dispositivo | Adaptaciones |
+|------------|-------------|--------------|
+| > 1024px | Desktop | Layout completo con sidebar expandido |
+| 768px - 1024px | Tablet | Sidebar colapsado, grids adaptados |
+| 480px - 768px | Movil grande | Layout vertical, controles apilados |
+| < 480px | Movil pequeno | Sidebar minimo (60px), textos reducidos |
 
 ## Pruebas de Usabilidad
 
