@@ -1,0 +1,51 @@
+/* Variables globales del diseño Sazon Imperial */
+:root {
+  /* Colores principales */
+  --color-primary: #ad0000;
+  --color-primary-dark: #8a0000;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  --color-overlay-light: rgba(4, 4, 4, 0.2);
+  --color-gray: #f5f5f5;
+  --color-gray-dark: #333333;
+  --color-success: #4caf50;
+  --color-border: rgba(0, 0, 0, 0.1);
+
+  /* Fuentes */
+  --font-logo: 'Leckerli One', cursive;
+  --font-nav: 'Kokoro', sans-serif;
+  --font-decorative: 'Kaushan Script', cursive;
+  --font-services: 'Aclonica', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Espaciado */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --spacing-2xl: 64px;
+
+  /* Bordes */
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 33px;
+  --border-radius-xl: 36px;
+
+  /* Sombras */
+  --shadow-text: 5px 4px 4px rgba(0, 0, 0, 0.25);
+  --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.15);
+
+  /* Tamaños */
+  --header-height: 79px;
+  --footer-height: 54px;
+  --sidebar-width: 256px;
+
+  /* Breakpoints (para referencia en media queries) */
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-wide: 1440px;
+}
