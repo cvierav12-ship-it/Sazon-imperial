@@ -1,0 +1,27 @@
+.footer {
+  background-color: var(--color-black);
+  height: var(--footer-height);
+  margin-top: auto;
+}
+
+.footer__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--spacing-md);
+}
+
+.footer__text {
+  color: var(--color-white);
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .footer__text {
+    font-size: 12px;
+  }
+}
