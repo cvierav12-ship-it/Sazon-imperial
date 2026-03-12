@@ -101,3 +101,28 @@
     padding: var(--spacing-md);
   }
 }
+
+@media (max-width: 480px) {
+  .admin-layout__main {
+    margin-left: 60px;
+  }
+
+  .admin-layout__header {
+    height: 60px;
+    padding: 0 var(--spacing-sm);
+  }
+
+  .admin-layout__welcome h2 {
+    font-size: 16px;
+  }
+
+  .admin-layout__avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .admin-layout__content {
+    padding: var(--spacing-sm);
+  }
+}

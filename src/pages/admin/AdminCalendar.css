@@ -194,3 +194,23 @@
     margin-bottom: var(--spacing-sm);
   }
 }
+
+@media (max-width: 480px) {
+  .admin-calendar__header {
+    padding: var(--spacing-sm);
+  }
+
+  .admin-calendar__header h2 {
+    font-size: 16px;
+  }
+
+  .admin-calendar__nav-btn,
+  .admin-calendar__today-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .admin-calendar__month {
+    font-size: 14px;
+  }
+}

@@ -143,3 +143,33 @@
     display: none;
   }
 }
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar__logo {
+    padding: var(--spacing-sm);
+    min-height: 80px;
+  }
+
+  .sidebar__logo-text::first-letter {
+    font-size: 20px;
+  }
+
+  .sidebar__nav {
+    padding: var(--spacing-xs);
+  }
+
+  .sidebar__link {
+    padding: var(--spacing-xs);
+    justify-content: center;
+  }
+
+  .sidebar__logout {
+    padding: var(--spacing-xs);
+    margin: var(--spacing-xs);
+    justify-content: center;
+  }
+}

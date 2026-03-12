@@ -183,3 +183,33 @@
     justify-content: space-between;
   }
 }
+
+@media (max-width: 480px) {
+  .admin-reservations__header {
+    padding: var(--spacing-sm);
+  }
+
+  .admin-reservations__header h2 {
+    font-size: 16px;
+  }
+
+  .admin-reservations__search {
+    font-size: 14px;
+  }
+
+  .admin-reservations__item {
+    padding: var(--spacing-sm);
+  }
+
+  .admin-reservations__date {
+    font-size: 14px;
+  }
+
+  .admin-reservations__name {
+    font-size: 14px;
+  }
+
+  .admin-reservations__info {
+    gap: var(--spacing-sm);
+  }
+}
