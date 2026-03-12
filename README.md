@@ -142,8 +142,27 @@ src/
 | `npm run preview` | Previsualiza build de producción |
 | `npm run lint` | Ejecuta ESLint |
 
+## Despliegue
+
+La aplicacion esta desplegada en GitHub Pages:
+
+https://cvierav12-ship-it.github.io/Sazon-imperial/
+
+### Ramas del Repositorio
+
+| Rama | Proposito |
+|------|-----------|
+| `main` | Codigo fuente del proyecto (React, JSX, CSS) |
+| `dist` | Build de produccion para GitHub Pages |
+
+### Proceso de Despliegue
+
+1. Ejecutar `npm run build` para generar la carpeta dist
+2. Subir el contenido de dist a la rama `dist`
+3. Configurar GitHub Pages para usar la rama `dist`
+
 ## Licencia
 
-Proyecto académico - IDAT
+Proyecto academico - IDAT
 Carrera: Desarrollo de Sistemas Front-end y Back-end
 2026
