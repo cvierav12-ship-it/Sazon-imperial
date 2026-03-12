@@ -1,0 +1,196 @@
+.admin-calendar {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.admin-calendar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.admin-calendar__header h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.admin-calendar__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.admin-calendar__nav-btn {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-white);
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.admin-calendar__nav-btn:hover {
+  background-color: var(--color-gray);
+}
+
+.admin-calendar__today-btn {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.admin-calendar__today-btn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.admin-calendar__month {
+  font-weight: 500;
+  min-width: 180px;
+  text-align: center;
+}
+
+.admin-calendar__grid-wrapper {
+  overflow-x: auto;
+}
+
+.admin-calendar__grid {
+  min-width: 900px;
+}
+
+.admin-calendar__row {
+  display: grid;
+  grid-template-columns: 100px repeat(7, 1fr);
+}
+
+.admin-calendar__row--header {
+  background-color: var(--color-gray);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.admin-calendar__cell {
+  padding: var(--spacing-sm);
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-calendar__cell:last-child {
+  border-right: none;
+}
+
+.admin-calendar__cell--time {
+  background-color: var(--color-gray);
+  font-size: 13px;
+  color: var(--color-gray-dark);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-height: auto;
+  padding: var(--spacing-xs);
+}
+
+.admin-calendar__cell--day {
+  text-align: center;
+  min-height: auto;
+  padding: var(--spacing-md);
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-calendar__cell--day.today {
+  background-color: rgba(173, 0, 0, 0.1);
+}
+
+.admin-calendar__cell.today-column {
+  background-color: rgba(173, 0, 0, 0.03);
+}
+
+.admin-calendar__day-name {
+  display: block;
+  font-size: 12px;
+  color: var(--color-gray-dark);
+  text-transform: uppercase;
+}
+
+.admin-calendar__day-number {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.admin-calendar__cell--day.today .admin-calendar__day-number {
+  color: var(--color-primary);
+}
+
+.admin-calendar__cell.has-reservation {
+  padding: 4px;
+}
+
+.admin-calendar__reservation {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-xs);
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  height: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-calendar__reservation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.admin-calendar__reservation-time {
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.admin-calendar__reservation-client {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.admin-calendar__reservation-persons {
+  font-size: 11px;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-calendar__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-calendar__nav {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .admin-calendar__month {
+    order: -1;
+    width: 100%;
+    text-align: left;
+    margin-bottom: var(--spacing-sm);
+  }
+}
