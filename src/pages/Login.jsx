@@ -46,6 +46,10 @@ export default function Login() {
     }, 500);
   };
 
+  const handleClientLogin = () => {
+    setFormData({ username: 'cliente', password: 'cliente' });
+  };
+
   const handleAdminLogin = () => {
     setFormData({ username: 'admin', password: 'admin' });
   };
@@ -91,13 +95,22 @@ export default function Login() {
 
             {error && <p className="login__error">{error}</p>}
 
-            <button
-              type="button"
-              className="login__admin-link"
-              onClick={handleAdminLogin}
-            >
-              Administrador Login
-            </button>
+            <div className="login__test-users">
+              <button
+                type="button"
+                className="login__test-btn"
+                onClick={handleClientLogin}
+              >
+                Cliente Demo
+              </button>
+              <button
+                type="button"
+                className="login__test-btn"
+                onClick={handleAdminLogin}
+              >
+                Admin Demo
+              </button>
+            </div>
 
             <button
               type="submit"
