@@ -1,0 +1,116 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home__main {
+  flex: 1;
+}
+
+/* Hero Section */
+.home__hero {
+  position: relative;
+  height: 494px;
+  background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1440&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-overlay-light);
+  border: 1px solid rgba(0, 0, 0, 0.71);
+}
+
+.home__hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.home__title {
+  font-family: var(--font-logo);
+  font-size: 96px;
+  color: var(--color-white);
+  text-shadow: var(--shadow-text);
+  line-height: 1;
+}
+
+/* Services Section */
+.home__services {
+  padding: var(--spacing-lg) var(--spacing-md);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.home__services-title {
+  font-family: var(--font-decorative);
+  font-size: 64px;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.home__services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  padding: 0 var(--spacing-lg);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .home__title {
+    font-size: 72px;
+  }
+
+  .home__services-title {
+    font-size: 48px;
+  }
+
+  .home__services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .home__hero {
+    height: 350px;
+  }
+
+  .home__title {
+    font-size: 48px;
+  }
+
+  .home__services-title {
+    font-size: 36px;
+  }
+
+  .home__services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .home__hero {
+    height: 280px;
+  }
+
+  .home__title {
+    font-size: 36px;
+  }
+
+  .home__services-title {
+    font-size: 28px;
+  }
+
+  .home__services {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+}

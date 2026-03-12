@@ -1,0 +1,244 @@
+.reservations {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.reservations__main {
+  flex: 1;
+  padding: var(--spacing-xl);
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.reservations__title {
+  font-family: var(--font-decorative);
+  font-size: 48px;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.reservations__form {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reservations__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.reservations__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.reservations__label {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-gray-dark);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.reservations__icon {
+  font-size: 18px;
+}
+
+.reservations__input {
+  height: 60px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 18px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-white);
+  transition: border-color 0.2s ease;
+}
+
+.reservations__input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.reservations__input.error {
+  border-color: var(--color-primary);
+}
+
+.reservations__table-btn {
+  height: 60px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 18px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-white);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reservations__table-btn:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-gray);
+}
+
+.reservations__submit {
+  display: block;
+  width: 100%;
+  max-width: 490px;
+  height: 80px;
+  margin: 0 auto;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 24px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.reservations__submit:hover:not(:disabled) {
+  background-color: var(--color-primary-dark);
+}
+
+.reservations__submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Modal de éxito */
+.reservations__success {
+  text-align: center;
+  padding: var(--spacing-md);
+}
+
+.reservations__success-icon {
+  width: 108px;
+  height: 108px;
+  background-color: var(--color-success);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  color: var(--color-white);
+  margin: 0 auto var(--spacing-lg);
+}
+
+.reservations__success-title {
+  font-size: 32px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.reservations__success-subtitle {
+  color: var(--color-gray-dark);
+  margin-bottom: var(--spacing-lg);
+}
+
+.reservations__details {
+  background-color: var(--color-gray);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  text-align: left;
+}
+
+.reservations__details-title {
+  font-size: 20px;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.reservations__details-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.reservations__details-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reservations__details-label {
+  color: var(--color-gray-dark);
+}
+
+.reservations__details-value {
+  font-weight: 500;
+}
+
+.reservations__success-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+}
+
+.reservations__success-btn {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: 16px;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transition: background-color 0.2s ease;
+}
+
+.reservations__success-btn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.reservations__success-btn--secondary {
+  background-color: transparent;
+  color: var(--color-black);
+  border: 1px solid var(--color-border);
+}
+
+.reservations__success-btn--secondary:hover {
+  background-color: var(--color-gray);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reservations__title {
+    font-size: 36px;
+  }
+
+  .reservations__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .reservations__submit {
+    max-width: 100%;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .reservations__success-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .reservations__main {
+    padding: var(--spacing-md);
+  }
+
+  .reservations__title {
+    font-size: 28px;
+  }
+
+  .reservations__input,
+  .reservations__table-btn {
+    height: 50px;
+    font-size: 16px;
+  }
+}
